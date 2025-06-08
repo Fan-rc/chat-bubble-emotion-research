@@ -1,0 +1,136 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* 背景图片相关样式 */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #000;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90%;
+  max-width: 600px;
+  margin-left: 15%;
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.get-started-button {
+  background-color: #6c4fc7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2.5rem;
+}
+
+.get-started-button:hover {
+  transform: scale(1.05);
+  background-color: #7e5dd9;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+}
+
+/* 添加全局样式，确保背景图片能够填满整个页面 */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+  .content-container {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    margin-left: 5%;
+    padding: 20px;
+  }
+  
+  .get-started-button {
+    margin-bottom: 2rem;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    margin-left: 20px;
+    padding: 15px;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .get-started-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo {
+    width: 80px;
+  }
+} 

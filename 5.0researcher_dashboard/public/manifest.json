@@ -1,0 +1,15 @@
+{
+  "short_name": "研究者仪表盘",
+  "name": "聊天气泡情感匹配研究项目 - 研究者仪表盘",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+} 

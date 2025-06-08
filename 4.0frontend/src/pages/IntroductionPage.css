@@ -1,0 +1,245 @@
+.intro-container {
+  display: flex;
+  flex-direction: row; /* 改为水平布局，左右两部分并排 */
+  align-items: center; /* 垂直居中所有内容 */
+  justify-content: center; /* 水平居中所有内容 */
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: white;
+  /* 背景图片相关样式 */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: 0; /* 去掉左边距 */
+  padding: 10px;
+  margin-top: 0;
+  /* 去掉背景色和阴影效果 */
+  border-radius: 15px;
+  /* 去掉模糊效果 */
+}
+
+/* 右侧故事板容器 */
+.storyboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%; /* 稍微调整宽度 */
+  height: 100vh;
+  position: relative;
+  padding: 0 30px; /* 两侧添加内边距 */
+}
+
+/* 故事板图片样式 */
+.storyboard-image {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* 自定义滚动条 */
+.intro-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.intro-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.intro-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.intro-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.intro-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 15px;
+}
+
+.intro-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);  /* 增强文字阴影 */
+}
+
+.intro-description {
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.intro-description p {
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);  /* 增强文字阴影 */
+  font-weight: 500;  /* 稍微加粗文字 */
+}
+
+.user-input-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);  /* 增强文字阴影 */
+}
+
+.participant-input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.participant-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.start-experiment-btn {
+  background-color: #6c4fc7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.start-experiment-btn:hover {
+  transform: translateY(-2px);
+  background-color: #7e5dd9;
+}
+
+.arrow-icon {
+  margin-left: 8px;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-bottom: 15px;
+  background-color: rgba(255, 0, 0, 0.3);
+  padding: 8px 12px;
+  border-radius: 4px;
+  border-left: 4px solid #ff6b6b;
+  width: 100%;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .intro-content {
+    width: 35%;
+  }
+  
+  .storyboard-container {
+    width: 55%;
+  }
+}
+
+@media (max-width: 992px) {
+  .intro-content {
+    width: 45%;
+  }
+  
+  .storyboard-container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column; /* 在小屏幕上改为上下布局 */
+  }
+  
+  .intro-content {
+    width: 90%;
+    margin: 0 auto; /* 居中显示 */
+    padding: 20px;
+    max-height: none; /* 移除最大高度限制 */
+    margin-bottom: 20px;
+  }
+  
+  .storyboard-container {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto; /* 居中显示 */
+  }
+  
+  .storyboard-image {
+    max-height: 50vh;
+  }
+  
+  .intro-title {
+    font-size: 1.6rem;
+  }
+  
+  .intro-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-content {
+    width: 90%;
+    padding: 15px;
+  }
+  
+  .intro-title {
+    font-size: 1.4rem;
+  }
+  
+  .storyboard-image {
+    max-height: 40vh;
+  }
+} 
