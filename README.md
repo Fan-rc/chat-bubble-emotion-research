@@ -1,18 +1,18 @@
-# 聊天气泡情感匹配研究项目
+# Chat Bubble Emotion Matching Research Project
 
-这是一个用于研究聊天气泡和情感解释匹配的Web应用程序。用户将在这个应用中进行一系列的选择，匹配他们心目中的聊天气泡和情感解释，结果将被储存用于研究分析。
+This is a web application designed for researching the matching between chat bubbles and emotional interpretations. Users will make a series of choices in this application, matching chat bubbles with emotional interpretations according to their perception. The results will be stored for research analysis.
 
-## 项目结构
+## Project Structure
 
-- `1.0banckground/`: 包含背景和聊天气泡图片资源
-- `2.0buttons/`: 包含按钮和情感选项图片资源
-- `3.0backend/`: 后端服务器
-- `4.0frontend/`: 前端应用（用户端）
-- `5.0researcher_dashboard/`: 研究者仪表盘（展示统计数据）
+- `1.0banckground/`: Contains background and chat bubble image resources
+- `2.0buttons/`: Contains button and emotion option image resources
+- `3.0backend/`: Backend server
+- `4.0frontend/`: Frontend application (user side)
+- `5.0researcher_dashboard/`: Researcher dashboard (displaying statistical data)
 
-## 运行说明
+## Running Instructions
 
-### 1. 启动后端服务器
+### 1. Start the Backend Server
 
 ```bash
 cd 3.0backend
@@ -20,9 +20,9 @@ npm install
 npm run dev
 ```
 
-服务器将在端口5001上运行。
+The server will run on port 5001.
 
-### 2. 启动前端应用（用户端）
+### 2. Start the Frontend Application (User Side)
 
 ```bash
 cd 4.0frontend
@@ -30,9 +30,9 @@ npm install
 npm start
 ```
 
-前端应用将在端口3000上运行，自动在浏览器中打开。
+The frontend application will run on port 3000 and automatically open in your browser.
 
-### 3. 启动研究者仪表盘
+### 3. Start the Researcher Dashboard
 
 ```bash
 cd 5.0researcher_dashboard
@@ -40,30 +40,30 @@ npm install
 npm start
 ```
 
-或者直接运行脚本：
+Or run the script directly:
 
 ```bash
 ./5.0researcher_dashboard/start_dashboard.sh
 ```
 
-研究者仪表盘将在端口3001上运行，显示所有用户选择的统计数据。
+The researcher dashboard will run on port 3001, displaying statistical data of all user choices.
 
-## 使用流程
+## Usage Flow
 
-### 用户端（端口3000）:
-1. 首页：查看研究介绍，点击"开始"按钮
-2. 介绍页：阅读详细研究说明，输入参与者编号
-3. 测试页(9页)：为每个聊天气泡选择相应的情感解释
-4. 结果页：查看选择统计和总结
+### User Side (Port 3000):
+1. Homepage: View research introduction, click the "Start" button
+2. Introduction page: Read detailed research instructions, enter participant ID
+3. Test pages (9 pages): Choose corresponding emotional interpretations for each chat bubble
+4. Results page: View choice statistics and summary
 
-### 研究者仪表盘（端口3001）:
-1. 显示参与者统计数据
-2. 按照从高到低的顺序展示用户对每个聊天气泡的情感选择统计
-3. 每30秒自动刷新数据
-4. 显示格式："{数量} 人认为这个气泡代表{情感}情绪"
+### Researcher Dashboard (Port 3001):
+1. Display participant statistics
+2. Show emotional choice statistics for each chat bubble in descending order
+3. Automatically refresh data every 30 seconds
+4. Display format: "{Number} people think this bubble represents {emotion} emotion"
 
-## 数据存储
+## Data Storage
 
-用户的选择将被存储在后端的`data`目录下：
-- `sessions.json`: 保存会话信息
-- `responses.json`: 保存用户的选择 
+User choices will be stored in the `data` directory on the backend:
+- `sessions.json`: Saves session information
+- `responses.json`: Saves user choices 
